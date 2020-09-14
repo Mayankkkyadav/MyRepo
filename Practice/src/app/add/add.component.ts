@@ -13,7 +13,7 @@ export class AddComponent implements OnInit {
    emp:Employee ;
 
   constructor( private service: PracticeService , private router: Router ) {
-    this.emp = new Employee;
+    this.emp = new Employee();
    }
 
   ngOnInit(): void {

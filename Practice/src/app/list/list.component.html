@@ -10,14 +10,14 @@
       </thead>
 
         <tbody>
-            <tr *ngFor="let emp of emp; let i of index">
-                <td>{{emp.name}}</td>
-                <td>{{emp.id}}</td>
-                <td>{{emp.city}}</td>
+            <tr *ngFor="let a of list; let i = index">
+                <td>{{ a.name }}</td>
+                <td>{{ a.id }}</td>
+                <td>{{ a.city }}</td>
             <td>
-            <button type="submit" value="delete" (click)="delete(i)" >delete</button>
-            &nbsp;&nbsp;&nbsp;
-            <button type="submit" value="edit"  (click)="edit(i)"></button>
+            <button   (click)="delete(i)">delete</button>
+            &nbsp;&nbsp;
+            <button  (click)="edit(i)">Edit</button>
           </td>
          </tr>
          
@@ -25,3 +25,5 @@
 
     </table>
 
+  
+  

@@ -11,13 +11,13 @@ export class PracticeService {
 empList: Employee[]=[] ;
   
   
-constructor(private router :Router) { }
-   
+constructor(private router :Router) { } 
+                                         
 save(emp:Employee){
     this.empList.push(emp);
   }
 
-getList(){
+list(){
     return this.empList ;
   }
 

@@ -1,17 +1,17 @@
-<form (ngSubmit)="saveEmp()">
+<form >
     <table>
         <div>
             <label for="name">name</label>
-            <input type="text" name="name" value="name" [(ngModel)]=emp.id placeholder="name">
+            <input  name="name"  [(ngModel)]=emp.name placeholder="name">
         </div>
         <div>
             <label for="id">id</label>
-            <input type="number" name="id" value="id"   [(ngModel)]=emp.id placeholder="id">
+            <input name="id"    [(ngModel)]=emp.id placeholder="id">
          </div>
          <div>
              <label for="city">city</label>
-             <input type="text" name="city" value="city" [(ngModel)]=emp.city placeholder="city" >
+             <input  name="city"  [(ngModel)]=emp.city placeholder="city" >
          </div>
-         <button type="submit" >AddEmployee</button>
+         <button type="submit" (click)="saveEmp()" >AddEmployee</button>
     </table>
 </form>

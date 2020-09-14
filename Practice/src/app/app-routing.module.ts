@@ -6,6 +6,7 @@ import { SearchComponent } from './search/search.Component' ;
 
 
 const routes: Routes = [
+   {path: '',redirectTo: 'add' , pathMatch: 'full'},
   { path:'add',component:AddComponent},
   { path:'list',component:ListComponent},
   { path:'search',component:SearchComponent},
@@ -16,3 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [AddComponent,ListComponent,SearchComponent];

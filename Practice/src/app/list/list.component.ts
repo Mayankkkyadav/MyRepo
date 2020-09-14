@@ -9,14 +9,14 @@ import { Employee } from '../employee.model';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-   emp:Employee[]=[] ;
+  list:Employee[] = [];
   
-  constructor( private service: PracticeService , private router: Router ) {
+  constructor(private service : PracticeService, private router : Router) {
     
    }
 
-  ngOnInit(): void {
-    this.emp=this.service.getList() ;
+  ngOnInit() {
+    this.list = this.service.list();
   }
   
   delete(index:number){
