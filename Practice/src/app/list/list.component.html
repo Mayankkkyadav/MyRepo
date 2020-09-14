@@ -1,0 +1,27 @@
+
+    <table>
+        <thead>
+        <tr>
+        <th>name</th>
+        <th>id</th>
+        <th>city</th>
+        <th>Action</th>
+        </tr>
+      </thead>
+
+        <tbody>
+            <tr *ngFor="let emp of emp; let i of index">
+                <td>{{emp.name}}</td>
+                <td>{{emp.id}}</td>
+                <td>{{emp.city}}</td>
+            <td>
+            <button type="submit" value="delete" (click)="delete(i)" >delete</button>
+            &nbsp;&nbsp;&nbsp;
+            <button type="submit" value="edit"  (click)="edit(i)"></button>
+          </td>
+         </tr>
+         
+        </tbody>
+
+    </table>
+
