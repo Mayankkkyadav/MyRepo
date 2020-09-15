@@ -1,17 +1,19 @@
+
+
 <form (ngSubmit)="updateEmp()">
-    <table>
-        <div>
-            <label for="name">name</label>
-            <input id="name" [(ngModel)]=emp.name placeholder="name">
-        </div>
-        <div>
-            <label for="id">id</label>
-            <input id="id" [(ngModel)]=emp.id placeholder="id">
-        </div>
-        <div>
-            <label for="city">city</label>
-            <input id="city" [(ngModel)]=emp.city placeholder="city">
-        </div>
-        <button type="submit" >submit</button>
-    </table>
+    <div >
+        <label for="id">Employee ID</label>
+        <input  name="id" [(ngModel)]=emp.id>
+        
+    </div>
+    <div >
+        <label for="name">Employee Name</label>
+        <input  name="name" [(ngModel)]=emp.name>
+    </div>
+    <div >
+        <label for="salary">Employee Salary</label>
+        <input name="salary" [(ngModel)]=emp.city>
+    </div>
+    <button type="submit" >
+        Update Employee</button>
 </form>

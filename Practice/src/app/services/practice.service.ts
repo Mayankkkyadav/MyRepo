@@ -37,13 +37,13 @@ delete(index:number){
     this.empList.splice(index,1);
   }
 
-  findByIndex(index:number) : Employee {
-    return this.empList[index];
+  edit(index : number) {
+    // http://localhost:4200/edit?index=0
+    this.router.navigate(['edit'],{queryParams: {index: index}});
   }
-   
-edit(index:number){
-  // http://localhost:4200/edit?index=0
-  this.router.navigate(['edit'],{queryParams: {index: index}});
+  
+  findByIndex(index : number) : Employee {
+    return this.empList[index];
   }
 
   sortOnId() {
