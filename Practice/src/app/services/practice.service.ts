@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Employee } from 'src/app/employee.model';
 import { Router } from '@angular/router';
+import { SearchComponent } from '../search/search.Component';
+import { escapeIdentifier } from '@angular/compiler/src/output/abstract_emitter';
 
 
 @Injectable({
@@ -9,6 +11,7 @@ import { Router } from '@angular/router';
 export class PracticeService {
   
 empList: Employee[]=[] ;
+
   
   
 constructor(private router :Router) { } 
@@ -21,7 +24,7 @@ list(){
     return this.empList ;
   }
 
-search(id:number){
+search(id:number) :Employee{
 let result= this.empList.find( x => x.id==id );
 if(result==null){
   return null;
@@ -33,14 +36,20 @@ return result ;
 delete(index:number){
     this.empList.splice(index,1);
   }
-   
-// edit(index:number){
-//    this.router.navigate(['edit'],{queryParams: {index: index}});
-//  }
 
- // sortOnId() {
- //  this.empList.sort((a, b) =>  a.id - b.id );
- // return this.empList ;
- // }
+  findByIndex(index:number) : Employee {
+    return this.empList[index];
+  }
+   
+edit(index:number){
+  // http://localhost:4200/edit?index=0
+  this.router.navigate(['edit'],{queryParams: {index: index}});
+  }
+
+  sortOnId() {
+  //  this.empList.sort((a, b) => a.id - b.id);
+    return this.empList ;
+  }
 
 }
+

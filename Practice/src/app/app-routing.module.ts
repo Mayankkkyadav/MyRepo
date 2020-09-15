@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddComponent } from './add/add.Component' ;
 import { ListComponent } from './list/list.Component' ;
 import { SearchComponent } from './search/search.Component' ;
-
+import { EditComponent } from './edit/edit.component';
+ 
 
 const routes: Routes = [
    {path: '',redirectTo: 'add' , pathMatch: 'full'},
   { path:'add',component:AddComponent},
   { path:'list',component:ListComponent},
   { path:'search',component:SearchComponent},
+  { path:'edit',component:EditComponent},
 ];
 
 @NgModule({
@@ -17,4 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [AddComponent,ListComponent,SearchComponent];
+export const routingComponents = [AddComponent,ListComponent,SearchComponent,EditComponent];

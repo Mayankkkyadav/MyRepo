@@ -11,6 +11,7 @@ import { Employee } from '../employee.model';
 export class ListComponent implements OnInit {
   list:Employee[] = [];
   
+  
   constructor(private service : PracticeService, private router : Router) {
     
    }
@@ -26,12 +27,12 @@ export class ListComponent implements OnInit {
   }
 }
 
- // edit(index:number){
-  //  this.service.edit(index);
- // }
+  edit(index:number){
+    this.service.edit(index);
+  }
 
- // sortById(){
-  //  this.emp= this.service.sortOnId();
- // }
+  sortById(){
+   this.list= this.service.sortOnId();
+  }
 
 }
